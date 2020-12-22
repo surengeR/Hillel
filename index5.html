@@ -12,32 +12,18 @@
             let spaces = str_length - name.length;
 
             while(symbol.length > 1){
-                symbol = prompt('Пожалуйста, введите ТОЛЬКО 1 символ!!!');
+                break;
             }
-
-            if(flag === true ){
-                for(let i = 1 ; i <= spaces; i++){
+            for(let i = 1; i <= spaces; i++){
+                if(flag === true){
                     name += symbol;
-
                 }
-                console.log(name);
-            } 
-            else{
-                for(let i = 0 ; i < spaces; i++){
+                else{
                     name = symbol + name;
-
                 }
-                console.log(name);
-
             }
-
         }
-        name = prompt('Введите имя: ', 'имя');
-        str_length = +prompt('Введите число для строки: ', 8);
-        flag = +prompt('Введите true либо false: ', true);
-        symbol = prompt('Введите символ: ', '*');
-
-        padString(name, str_length, flag, symbol);
+        padString("Ivan", 6, true, "*");
 
 
 

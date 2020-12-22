@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+    <script type="text/javascript">
+
+
+
+        function padString( name, str_length, flag, symbol){
+            let spaces = str_length - name.length;
+
+            while(symbol.length > 1){
+                symbol = prompt('Пожалуйста, введите ТОЛЬКО 1 символ!!!');
+            }
+
+            if(flag === true ){
+                for(let i = 1 ; i <= spaces; i++){
+                    name += symbol;
+
+                }
+                console.log(name);
+            } 
+            else{
+                for(let i = 0 ; i < spaces; i++){
+                    name = symbol + name;
+
+                }
+                console.log(name);
+
+            }
+
+        }
+        name = prompt('Введите имя: ', 'имя');
+        str_length = +prompt('Введите число для строки: ', 8);
+        flag = +prompt('Введите true либо false: ', true);
+        symbol = prompt('Введите символ: ', '*');
+
+        padString(name, str_length, flag, symbol);
+
+
+
+    </script>
+
+</body>
+</html>
